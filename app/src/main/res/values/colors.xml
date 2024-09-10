@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="economy_color">#2196F3</color>
+    <color name="politic_color">#E91E63</color>
+    <color name="spect_color">#4CAF50</color>
+    <color name="positivo_variation">#216724</color>
+    <color name="negativo_variation">#961515</color>
+</resources>

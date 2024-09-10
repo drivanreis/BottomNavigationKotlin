@@ -1,65 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
     tools:context=".fragments.LoginFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/main"
+
+    <LinearLayout
+        android:id="@+id/login_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clickable="true"
-        android:focusable="true"
-        tools:context=".MainActivity">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
 
         <LinearLayout
-            android:id="@+id/linear_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:id="@+id/login_top"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/logo"
+                android:id="@+id/imageView"
+                android:layout_width="124dp"
+                android:layout_height="94dp"
+                android:src="@drawable/moneychanger" />
+
+            <TextView
+                android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="50dp"
-                app:srcCompat="@drawable/logo" />
+                android:text="BI-EXCHANGE"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/login_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:startIconDrawable="@drawable/email_icon_24dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="@string/email">
+                android:hint="@string/email"
+                app:startIconDrawable="@drawable/email_icon_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email_text_edit_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
-                    android:inputType="textEmailAddress"/>
+                    android:inputType="textEmailAddress"
+
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:startIconDrawable="@drawable/password_icon_24dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/password"
                 app:endIconMode="password_toggle"
-                android:hint="@string/password">
+                app:startIconDrawable="@drawable/password_icon_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/password_text_edit_layout"
@@ -76,10 +95,12 @@
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:backgroundTint="#006D3E"
                 android:enabled="false"
-                android:text="@string/entrar"
-                android:textColor="@color/white" />
+                android:text="Entrar"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/forgot_password_button"
@@ -94,21 +115,25 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/sign_up_button"
-            style="@style/Widget.Material3.Button.OutlinedButton"
+
+        <LinearLayout
+            android:id="@+id/login_botton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:enabled="true"
-            android:text="@string/signup"
-            android:textColor="#006D3E"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:orientation="vertical">
 
+            <Button
+                android:id="@+id/sign_up_button"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:enabled="true"
+                android:text="@string/signup"
+                android:textColor="#006D3E" />
+        </LinearLayout>
 
+    </LinearLayout>
 </FrameLayout>

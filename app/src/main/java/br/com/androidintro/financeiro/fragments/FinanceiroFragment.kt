@@ -26,7 +26,7 @@ class FinanceiroFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView = view.findViewById(R.id.news_recycler_view)
+        recyclerView = view.findViewById(R.id.finan_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(context)
     }
 

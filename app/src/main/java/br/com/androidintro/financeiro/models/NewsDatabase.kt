@@ -78,7 +78,30 @@ object NewsDatabase {
             "Política",
             "Projeto de lei de proteção ambiental avança no Senado",
             "O projeto de lei que visa aumentar a proteção ambiental foi aprovado em uma comissão do Senado, avançando para a votação final."
-        )
+        ),        NewsInterface(
+            13,
+            "Esporte",
+            "Mercado de trabalho mostra sinais de recuperação",
+            "A taxa de desemprego começou a cair, refletindo uma recuperação gradual após a crise provocada pela pandemia."
+        ),
+        NewsInterface(
+            14,
+            "Esporte",
+            "Aliança política busca fortalecimento regional",
+            "Líderes de vários partidos se uniram para formar uma nova aliança política com o objetivo de fortalecer o desenvolvimento regional."
+        ),
+        NewsInterface(
+            15,
+            "Esporte",
+            "Crise global afeta mercados emergentes",
+            "Os mercados emergentes estão enfrentando desafios devido à desaceleração global, afetando o crescimento e os investimentos."
+        ),
+        NewsInterface(
+            16,
+            "Esporte",
+            "Tecnologia impulsiona setor financeiro",
+            "A inovação tecnológica tem transformado o setor financeiro, com fintechs ganhando espaço e desafiando instituições tradicionais."
+        ),
     )
 
     fun findAll() = newsList

@@ -7,4 +7,5 @@
     <color name="spect_color">#4CAF50</color>
     <color name="positivo_variation">#216724</color>
     <color name="negativo_variation">#961515</color>
+    <color name="light_blue">#802196F3</color>
 </resources>

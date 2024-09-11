@@ -34,9 +34,9 @@ class NewsAdapter (private val newsList: List<NewsInterface>)
         holder.category.text = newsList[position].category
 
         when(newsList[position].category){
-            "economia" -> holder.categoriColor.setBackgroundColor(holder.context.getColor(R.color.economy_color))
-            "poltica" -> holder.categoriColor.setBackgroundColor(holder.context.getColor(R.color.politic_color))
-            "esportes" -> holder.categoriColor.setBackgroundColor(holder.context.getColor(R.color.spect_color))
+            "Economia" -> holder.categoriColor.setBackgroundColor(holder.context.getColor(R.color.economy_color))
+            "Política" -> holder.categoriColor.setBackgroundColor(holder.context.getColor(R.color.politic_color))
+            "Esporte" -> holder.categoriColor.setBackgroundColor(holder.context.getColor(R.color.spect_color))
         }
     }
 }
